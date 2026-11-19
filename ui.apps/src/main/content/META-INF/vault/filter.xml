@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/airline/clientlibs"/>
+    <filter root="/apps/airline/components"/>
+    <filter root="/apps/airline/i18n"/>
+</workspaceFilter>
