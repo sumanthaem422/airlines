@@ -13,14 +13,10 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="airline/components/container"
             layout="responsiveGrid">
-            <separator
+            <footer
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="airline/components/separator"/>
-            <text
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="airline/components/text"
-                text="&lt;p>Copyright 2026, Airline Travel Info.&amp;nbsp;All rights reserved.&lt;/p>&#xd;&#xa;&lt;p>345 Park Avenue,&amp;nbsp;San Jose, CA 95110-2704, USA&lt;/p>&#xd;&#xa;"
-                textIsRich="true"/>
+                sling:resourceType="airline/components/footer"
+                copyrightText="© 2026 Airline Travel Info. All rights reserved."/>
         </root>
     </jcr:content>
 </jcr:root>

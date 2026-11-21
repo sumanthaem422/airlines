@@ -13,14 +13,15 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
-    <sly data-sly-call="${clientlib.js @ categories='airline.base', async=true}"/>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <!-- Load base and React SPA bundle -->
+    <sly data-sly-call="${clientlib.js @ categories=['airline.base', 'airline.react']}"/>
 </sly>
-<!--/*
-    SPA projects: In edit mode, include ClientLib for communication with page editor
-*/-->
-<sly
-  data-sly-test="${wcmmode.edit || wcmmode.preview}"
-  data-sly-call="${clientLib.js @ categories='cq.authoring.pagemodel.messaging'}"
-></sly>
+
+<!-- SPA Authoring Messaging for AEM Editor -->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-test="${wcmmode.edit || wcmmode.preview}"
+     data-sly-call="${clientlib.js @ categories='cq.authoring.pagemodel.messaging'}"/>
+
+<script type="text/javascript">if (window._satellite) { _satellite.pageBottom(); }</script>
 

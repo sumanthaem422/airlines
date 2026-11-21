@@ -1,0 +1,210 @@
+.cmp-joeyclubteaser {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    color: #222;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.cmp-joeyclubteaser__inner {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    width: 100%;
+    min-width: 0;
+    max-width: var(--air-max-w);
+    margin: 0 auto;
+    padding: var(--air-vpad-mobile) var(--air-gutter-mobile);
+}
+
+.cmp-joeyclubteaser *,
+.cmp-joeyclubteaser *::before,
+.cmp-joeyclubteaser *::after {
+    box-sizing: border-box;
+}
+
+.cmp-joeyclubteaser__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+.cmp-joeyclubteaser__title {
+    margin: 0;
+    color: #1a1a1a;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.2;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.cmp-joeyclubteaser__description {
+    width: 100%;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.cmp-joeyclubteaser__description p {
+    margin: 0 0 1.25rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.cmp-joeyclubteaser__description p:last-child {
+    margin-bottom: 0;
+}
+
+.cmp-joeyclubteaser__cta {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    color: #ba1200;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.cmp-joeyclubteaser__cta:hover {
+    color: #9e0f00;
+    background: transparent;
+    text-decoration: none;
+}
+
+.cmp-joeyclubteaser__cta:focus {
+    outline: 3px solid #ba1200;
+    outline-offset: 3px;
+}
+
+.cmp-joeyclubteaser__cta:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.cmp-joeyclubteaser__cta:focus-visible {
+    outline: 3px solid #ba1200;
+    outline-offset: 3px;
+}
+
+.cmp-joeyclubteaser__arrow {
+    flex: none;
+    margin-left: 0.35rem;
+}
+
+.cmp-joeyclubteaser__media {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 2.5rem;
+    overflow: hidden;
+    background: #aae0fa;
+    border: 0;
+    border-radius: 20px 20px 20px 72px;
+}
+
+.cmp-joeyclubteaser__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    object-fit: contain;
+}
+
+.cmp-joeyclubteaser__placeholder {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 8rem;
+    margin: 0.5rem;
+    padding: 1.5rem;
+    border: 1px dashed #6d8296;
+    background: #f4f7fb;
+    color: #243447;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .cmp-joeyclubteaser__inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+
+    .cmp-joeyclubteaser__content,
+    .cmp-joeyclubteaser__media {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .cmp-joeyclubteaser__inner {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .cmp-joeyclubteaser__content {
+        flex: 0 1 45%;
+        width: 45%;
+        max-width: 45%;
+    }
+
+    .cmp-joeyclubteaser__media {
+        flex: 0 1 55%;
+        width: 55%;
+        max-width: 55%;
+    }
+
+    .cmp-joeyclubteaser__title {
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+    .cmp-joeyclubteaser__inner {
+        padding: var(--air-vpad-tablet) var(--air-gutter-tablet);
+    }
+}
+
+@media (min-width: 900px) {
+    .cmp-joeyclubteaser__inner {
+        padding: var(--air-vpad-desktop) var(--air-gutter-desktop);
+    }
+}

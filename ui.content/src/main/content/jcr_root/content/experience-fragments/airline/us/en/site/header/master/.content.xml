@@ -13,22 +13,11 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="airline/components/container"
             layout="simple">
-            <navigation
+            <header
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="airline/components/navigation"
-                collectAllPages="false"
+                sling:resourceType="airline/components/header"
                 navigationRoot="/content/airline/us/en"
-                skipNavigationRoot="false"
-                structureDepth="1"/>
-            <languagenavigation
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="airline/components/languagenavigation"
-                navigationRoot="/content/airline/us"
-                structureDepth="2"/>
-            <search
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="airline/components/search"
-                searchRoot="/content/airline/us"/>
+                structureDepth="{Long}1"/>
         </root>
     </jcr:content>
 </jcr:root>

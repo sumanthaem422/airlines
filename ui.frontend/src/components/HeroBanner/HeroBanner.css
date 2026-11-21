@@ -1,0 +1,192 @@
+.cmp-herobanner {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #1b2838;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.cmp-herobanner__inner {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    width: 100%;
+    min-width: 0;
+    max-width: var(--air-max-w);
+    margin: 0 auto;
+    padding: var(--air-vpad-mobile) var(--air-gutter-mobile);
+}
+
+.cmp-herobanner__inner + .cmp-herobanner__inner {
+    padding-top: 0;
+}
+
+.cmp-herobanner *,
+.cmp-herobanner *::before,
+.cmp-herobanner *::after {
+    box-sizing: border-box;
+}
+
+.cmp-herobanner__title {
+    margin: 0;
+    max-width: 100%;
+    color: #102033;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+    text-transform: none;
+}
+
+.cmp-herobanner__media {
+    width: 100%;
+    max-width: 1280px;          
+    margin: 0 auto;            
+    min-width: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0;
+    border-bottom-right-radius: 96px;
+}
+
+.cmp-herobanner__image {
+    display: block;
+    width: 70%;
+    height: auto;
+    aspect-ratio: 16 / 7;
+    object-fit: cover;
+    border-radius: 0;
+    border-bottom-right-radius: 96px;
+}
+
+.cmp-herobanner__image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    min-height: 8rem;
+    aspect-ratio: 16 / 7;
+    margin: 0;
+    padding: 1.5rem;
+    border: 1px dashed #6d8296;
+    border-bottom-right-radius: 96px;
+    background: #f4f7fb;
+    color: #243447;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.cmp-herobanner__intro {
+    margin: 0;
+    max-width: min(780px, 100%);
+    color: #243447;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.cmp-herobanner__on-this-page {
+    margin: 0;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.cmp-herobanner__on-this-page-label {
+    margin: 0 0 0.5rem;
+    color: #5c6b7a;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.cmp-herobanner__links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cmp-herobanner__links a {
+    display: inline-block;
+    max-width: 100%;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: #e7eef5;
+    color: #0b3a66;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+}
+
+.cmp-herobanner__links a:hover,
+.cmp-herobanner__links a:focus {
+    background: #d3e2f0;
+    text-decoration: underline;
+}
+
+.cmp-herobanner__placeholder {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 8rem;
+    margin: 0.5rem;
+    padding: 1.5rem;
+    border: 1px dashed #6d8296;
+    background: #f4f7fb;
+    color: #243447;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+    .cmp-herobanner__inner {
+        padding: var(--air-vpad-tablet) var(--air-gutter-tablet);
+    }
+
+    .cmp-herobanner__inner + .cmp-herobanner__inner {
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .cmp-herobanner__title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .cmp-herobanner__inner {
+        padding: var(--air-vpad-desktop) var(--air-gutter-desktop);
+    }
+
+    .cmp-herobanner__inner + .cmp-herobanner__inner {
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .cmp-herobanner__title {
+        font-size: 3rem;
+    }
+}

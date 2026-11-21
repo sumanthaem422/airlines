@@ -14,7 +14,7 @@
     limitations under the License.
 */-->
 <sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
-    <sly data-sly-call="${clientlib.css @ categories='airline.base'}"/>
+    <sly data-sly-call="${clientlib.css @ categories=['airline.base', 'airline.react']}"/>
 </sly>
 
 <!--/*
@@ -28,7 +28,7 @@
 <meta
     property="cq:pagemodel_root_url"
     data-sly-use.page="com.adobe.aem.spa.project.core.models.Page"
-    content="${page.hierarchyRootJsonExportUrl}"
+    data-sly-attribute.content="${page.hierarchyRootJsonExportUrl || '{0}.model.json' @ format=request.requestPathInfo.resourcePath, context='uri'}"
 />
 
 <meta property="cq:datatype" data-sly-test="${wcmmode.edit || wcmmode.preview}" content="JSON" />

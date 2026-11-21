@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && clientlib --verbose",
-    "test": "react-scripts test",
+    "start": "sh scripts/with-openssl-legacy.sh react-scripts start",
+    "build": "sh scripts/with-openssl-legacy.sh react-scripts build && clientlib --verbose",
+    "test": "sh scripts/with-openssl-legacy.sh react-scripts test",
     "eject": "react-scripts eject",
     "sync": "aemsync -d -w ../ui.apps/src/main/content"
   },

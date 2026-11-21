@@ -1,0 +1,181 @@
+.airline-header {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    color: #102033;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.airline-header *,
+.airline-header *::before,
+.airline-header *::after {
+    box-sizing: border-box;
+}
+
+.airline-header__skip-link {
+    position: absolute;
+    left: 0.75rem;
+    top: 0.5rem;
+    z-index: 30;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.airline-header__skip-link:focus {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    background: #ba1200;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.airline-header__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--air-max-w);
+    margin: 0 auto;
+    padding: 0.75rem var(--air-gutter-mobile);
+}
+
+.airline-header__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: #102033;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-decoration: none;
+}
+
+.airline-header__mark {
+    display: block;
+    flex: 0 0 auto;
+}
+
+.airline-header__word {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+}
+
+.airline-header__wordmark {
+    color: #102033;
+}
+
+.airline-header__rule {
+    display: block;
+    width: 2.25rem;
+    height: 2px;
+    background: #ba1200;
+}
+
+.airline-header__logo:hover,
+.airline-header__logo:focus {
+    text-decoration: underline;
+}
+
+.airline-header__menu-button {
+    display: none;
+    margin: 0;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid #ba1200;
+    background: #ffffff;
+    color: #ba1200;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.airline-header__nav {
+    margin-left: auto;
+}
+
+.airline-header__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.airline-header__link {
+    color: #102033;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.airline-header__link:hover,
+.airline-header__link:focus {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .airline-header__menu-button {
+        display: inline-block;
+    }
+
+    .airline-header__nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: 20;
+        margin-left: 0;
+        background: #ffffff;
+    }
+
+    .airline-header__list {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        padding: 0.5rem var(--air-gutter-mobile) 1rem;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .airline-header__list--open {
+        display: flex;
+    }
+
+    .airline-header__link {
+        display: inline-block;
+        padding: 0.45rem 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+    .airline-header__bar {
+        padding-left: var(--air-gutter-tablet);
+        padding-right: var(--air-gutter-tablet);
+    }
+}
+
+@media (min-width: 900px) {
+    .airline-header__bar {
+        padding-left: var(--air-gutter-desktop);
+        padding-right: var(--air-gutter-desktop);
+    }
+}

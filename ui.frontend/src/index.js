@@ -29,6 +29,8 @@ const renderApp = () => {
                     cqItemsOrder={pageModel[Constants.ITEMS_ORDER_PROP]}
                     cqPath={pageModel[Constants.PATH_PROP]}
                     locationPathname={window.location.pathname}
+                    title={pageModel.title}
+                    id={pageModel.id}
                 />
             </Router>,
             document.getElementById('spa-root')

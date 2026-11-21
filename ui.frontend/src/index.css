@@ -16,6 +16,16 @@
 
 /* Global styles */
 
+:root {
+  --air-gutter-mobile:  1rem;
+  --air-gutter-tablet:  1.5rem;
+  --air-gutter-desktop: 2rem;
+  --air-vpad-mobile:    1.5rem;
+  --air-vpad-tablet:    2rem;
+  --air-vpad-desktop:   2.5rem;
+  --air-max-w:          1280px;
+}
+
 html,
 body {
   border: 0;
@@ -28,6 +38,15 @@ body {
 
 body {
   background-color: #ffffff;
+}
+
+/* Component inners own the gutter. This shell stays full-bleed. */
+#main-content {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
 h1,

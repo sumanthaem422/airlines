@@ -83,3 +83,23 @@ h5 {
     font-weight: 400;
   }
 }
+
+.cmp-text {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--air-max-w);
+  margin: 0 auto;
+  padding: var(--air-vpad-mobile) var(--air-gutter-mobile);
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+  .cmp-text {
+    padding: var(--air-vpad-tablet) var(--air-gutter-tablet);
+  }
+}
+
+@media (min-width: 900px) {
+  .cmp-text {
+    padding: var(--air-vpad-desktop) var(--air-gutter-desktop);
+  }
+}

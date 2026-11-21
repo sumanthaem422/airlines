@@ -21,6 +21,12 @@ import './ExperienceFragment/ExperienceFragment';
 
 import {MapTo} from '@adobe/aem-react-editable-components';
 
+
+import HeroBanner, {HeroBannerEditConfig} from './HeroBanner/HeroBanner';
+import './Teaser/Teaser';
+import './Accordion/Accordion';
+import './Header/Header';
+import './Footer/Footer';
 import {
     CarouselV1IsEmptyFn
 } from '@adobe/aem-core-components-react-spa/dist/isEmptyFunctions';
@@ -31,8 +37,7 @@ import {
 
 import {
     ContainerV1, ContainerV1IsEmptyFn,
-    TabsV1, TabsV1IsEmptyFn,
-    AccordionV1,AccordionV1IsEmptyFn,
+    TabsV1, TabsV1IsEmptyFn
 } from '@adobe/aem-core-components-react-spa';
 
 import {
@@ -41,7 +46,6 @@ import {
     ImageV2,ImageV2IsEmptyFn,
     LanguageNavigationV1,
     NavigationV1,
-    TeaserV1,TeaserV1IsEmptyFn,
     DownloadV1,DownloadV1IsEmptyFn,
     SeparatorV1,SeparatorV1IsEmptyFn,
     ListV2,ListV2IsEmptyFn
@@ -60,7 +64,6 @@ MapTo('airline/components/list')(ListV2, {isEmpty: ListV2IsEmptyFn});
 MapTo('airline/components/separator')(SeparatorV1, {isEmpty: SeparatorV1IsEmptyFn});
 
 MapTo('airline/components/button')(ButtonV1, {isEmpty: ButtonV1IsEmptyFn});
-MapTo('airline/components/teaser')(TeaserV1, {isEmpty: TeaserV1IsEmptyFn});
 MapTo('airline/components/image')(ImageV2, {isEmpty: ImageV2IsEmptyFn});
 MapTo('airline/components/title')(TitleV2, {isEmpty: TitleV2IsEmptyFn});
 
@@ -71,7 +74,6 @@ MapTo('airline/components/languagenavigation')(LanguageNavigationV1);
 
 
 MapTo('airline/components/tabs')(TabsV1, {isEmpty: TabsV1IsEmptyFn});
-MapTo('airline/components/accordion')(AccordionV1, {isEmpty: AccordionV1IsEmptyFn});
 MapTo('airline/components/carousel')(CarouselV1, {isEmpty: CarouselV1IsEmptyFn});
 MapTo('airline/components/container')(ContainerV1, {isEmpty: ContainerV1IsEmptyFn});
 

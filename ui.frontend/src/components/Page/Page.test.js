@@ -17,6 +17,7 @@
 import { ModelManager } from '@adobe/aem-spa-page-model-manager';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { act } from 'react-dom/test-utils';
 import sinon from 'sinon';
 import Page from './Page';
 
@@ -42,9 +43,13 @@ describe('Page ->', () => {
     window.location.hash = '';
 
     if (rootNode) {
-      document.body.removeChild(rootNode);
+      ReactDOM.unmountComponentAtNode(rootNode);
+      if (rootNode.parentNode) {
+        rootNode.parentNode.removeChild(rootNode);
+      }
     }
 
+    delete window.adobeDataLayer;
     sandbox.restore();
   });
 
@@ -67,5 +72,46 @@ describe('Page ->', () => {
     expect(rootNode.childElementCount).toEqual(1);
 
     expect(rootNode.querySelector('.' + EXTRA_CLASS_NAMES)).not.toBeNull();
+  });
+
+  it('pushes one cmp:show event when the page mounts', () => {
+    window.adobeDataLayer = [];
+
+    act(() => {
+      ReactDOM.render(<Page title="Flying with children" id="page-flying" />, rootNode);
+    });
+
+    expect(window.adobeDataLayer).toEqual([
+      {
+        event: 'cmp:show',
+        eventInfo: { path: 'page', type: 'page' },
+        page: { title: 'Flying with children', id: 'page-flying' }
+      }
+    ]);
+
+    act(() => {
+      ReactDOM.render(
+        <Page title="Updated title" id="page-flying" cssClassNames="refreshed" />,
+        rootNode
+      );
+    });
+
+    expect(window.adobeDataLayer).toHaveLength(1);
+    expect(window.adobeDataLayer[0].page.title).toBe('Flying with children');
+  });
+
+  it('omits the page object when the model has no title or id', () => {
+    window.adobeDataLayer = [];
+
+    act(() => {
+      ReactDOM.render(<Page />, rootNode);
+    });
+
+    expect(window.adobeDataLayer).toEqual([
+      {
+        event: 'cmp:show',
+        eventInfo: { path: 'page', type: 'page' }
+      }
+    ]);
   });
 });

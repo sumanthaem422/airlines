@@ -20,6 +20,7 @@ import {
   withComponentMappingContext
 } from '@adobe/aem-react-editable-components';
 import { withRoute } from '../RouteHelper/RouteHelper';
+import { pushPageShow } from '../../utils/adobeDataLayer';
 
 require('./Page.css');
 
@@ -27,6 +28,10 @@ require('./Page.css');
 // "airline/components/page" resource type. For now, the rendering is
 // the same as the RootPage; this is more for illustration purposes
 class AppPage extends Page {
+  componentDidMount() {
+    pushPageShow(this.props);
+  }
+
   get containerProps() {
     let attrs = super.containerProps;
     attrs.className =

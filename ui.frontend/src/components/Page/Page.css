@@ -14,8 +14,12 @@
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+/* Full-bleed shell. Header, hero, teaser, accordion, text, and footer
+   apply the gutter on their own inner wrappers. */
 .page {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
